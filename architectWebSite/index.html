@@ -11,16 +11,15 @@
         <div class="headerContainer">
             <img src="./assets/images/Logo.svg" class="logo" />
             <div class="menuContainer">
-                <span>Hoşgeldiniz</span>
-                <span>Hakkımızda</span>
-                <span>Hizmetlerimiz</span>
-                <span>Ekibimiz</span>
-                <span>Şubelerimiz</span>
-                <span>İletişim</span>
+                <a href="#welcome">Hoşgeldiniz</a>
+                <a href="#aboutUs">Hakkımızda</a>
+                <a href="#departments">Şubelerimiz</a>
+                <a href="#service">Hizmetlerimiz</a>
+                <a href="#communication">İletişim</a>
             </div>
         </div>
         <!--hoşgeldiniz sayfası-->
-        <div class="mainContainer">
+        <div class="mainContainer" id="welcome">
             <div class="sloganContainer">
                 <div>
                     <h1 class="slogan">Hayalleriniz</h1>
@@ -47,7 +46,7 @@
         </div>
 
         <!--hakkımızda sayfası-->
-        <div class="aboutUsContainer">
+        <div class="aboutUsContainer" id="aboutUs">
             <!--biz kimiz-->
             <div class="aboutSection">
                 <div class="imageWithText">
@@ -106,6 +105,140 @@
                         amacımızdır.
                     </p>
                     <span>more...</span>
+                </div>
+            </div>
+        </div>
+        <!--şubelerimiz sayfası-->
+        <div class="departments" id="departments">
+            <div class="branches">Şubelerimiz</div>
+            <div class="regions">
+                <div class="map">
+                    <img src="assets/images/map.png" />
+                </div>
+                <div class="cities">
+                    <div>
+                        <div>
+                            <img src="assets/images/russia.png" />
+                            <span class="city">Rusya</span>
+                        </div>
+                        <div>
+                            <img src="assets/images/suudiArabistan.png" />
+                            <span class="city">Suudi Arabistan</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="assets/images/turkiye.png" />
+                            <span class="city">Türkiye</span>
+                        </div>
+                        <div>
+                            <img src="assets/images/ispanya.png" />
+                            <span class="city">İspanya</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="assets/images/almanya.png" />
+                            <span class="city">Almanya</span>
+                        </div>
+                        <div>
+                            <img src="assets/images/fransa.png" />
+                            <span class="city">Fransa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--portfolyo sayfası-->
+        <div class="portfolioContainer" id="service">
+            <div class="portfolio">Portfolyo</div>
+            <div class="sectionsOfTheHouse">
+                <div class="roomsContainer">
+                    <div>
+                        <img src="assets/images/salon.jpg" />
+                        <div>Salon</div>
+                    </div>
+                    <div>
+                        <img src="assets/images/yatak_odasi.jpg" />
+                        <div>Yemek Odası</div>
+                    </div>
+                </div>
+                <div class="roomsContainer">
+                    <div>
+                        <img src="assets/images/cocuk_odasi.jpg" />
+                        <div>Çocuk Odası</div>
+                    </div>
+                    <div>
+                        <img src="assets/images/banyo.jpg" />
+                        <div>Banyo</div>
+                    </div>
+                </div>
+                <div class="roomsContainer">
+                    <div>
+                        <img src="assets/images/mutfak.jpg" />
+                        <div>Mutfak</div>
+                    </div>
+                    <div>
+                        <img src="assets/images/yemek_odasi.jpg" />
+                        <div>Yemek Odası</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--iletişim sayfası-->
+        <div class="communicationContainer" id="communication">
+            <div class="communication">İletişim</div>
+            <div class="contactInfo">
+                <!--bilgilendirme kısmı (telefon munarası ve mail adresi,mesanj kısmı)-->
+                <div class="contactDetails">
+                    <!--telefon no-->
+                    <div class="phoneInfo">
+                        <div class="phone">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            Telefon
+                        </div>
+                        <div class="phoneNumber">+90 544 186 49 10</div>
+                    </div>
+                    <!--mail-->
+                    <div class="emailInfo">
+                        <div class="email">
+                            <i class="fa-solid fa-envelope-circle-check"></i>
+                            Email
+                        </div>
+                        <div class="emailAdress">info@home.come</div>
+                    </div>
+                </div>
+                <div class="message">
+                    <input type="text" placeholder="İsim" />
+                    <input type="text" placeholder="E-mail" />
+                    <textarea
+                        cols="30"
+                        rows="10"
+                        placeholder="Mesajınız"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="sentContainer">
+                <div class="button">
+                    Gönder
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copyrightNotice">
+                Telif Hakkı <img src="./assets/images/Logo.svg" class="logo" />.
+                Tüm hakları saklıdır.
+            </div>
+            <div class="follow">
+                <span>Bizi takip etmek için</span>
+                <div class="ikon">
+                    <i class="fa-brands fa-square-pinterest"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
                 </div>
             </div>
         </div>

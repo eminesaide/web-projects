@@ -2,6 +2,9 @@
     font-family: "italianno";
     src: url("../fonts/Italianno-Regular.ttf");
 }
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -16,6 +19,9 @@ body {
     justify-content: space-between;
     display: flex;
 }
+a {
+    color: black;
+}
 .logo {
     width: 150px;
 }
@@ -27,42 +33,45 @@ body {
     gap: 20px;
 }
 .mainContainer {
-    display: flex;
     justify-content: space-between;
+    display: flex;
     height: 80%;
 }
 .sloganContainer {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    flex: 1;
-    gap: 50px;
-    height: 100%;
+    display: flex;
     padding: 30px;
+    height: 100%;
+    gap: 50px;
+    flex: 1;
 }
 .slogan {
-    color: white;
     font-family: "italianno";
+    user-select: none;
     font-size: 80px;
+    color: white;
 }
 .info {
     color: white;
 }
 .imgContainer {
-    flex: 1;
-    display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    display: flex;
+    flex: 1;
 }
 .button {
     background-image: linear-gradient(78deg, #b4975b 0%, #8e6d25 100%);
+    align-items: center;
     border-radius: 20px;
     padding: 8px 25px;
+    user-select: none;
+    color: white;
     display: flex;
     gap: 50px;
-    align-items: center;
-    color: white;
 }
 .welcomeImg {
     width: 100%;
@@ -73,53 +82,272 @@ body {
 }
 .grid {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+    user-select: none;
     width: 100%;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
 }
 .aboutUsContainer {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    display: flex;
     align-items: flex-start;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    display: flex;
 }
 .aboutSection {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    display: flex;
     gap: 40px;
+    flex: 1;
 }
 .imageWithText {
-    position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    display: flex;
+}
+.imageWithText img {
+    user-select: none;
+    height: 175px;
+    width: 275px;
 }
 .imageWithText span {
     position: absolute;
-    color: white;
-    font-size: 50px;
     text-align: center;
+    font-size: 40px;
+    color: white;
+    user-select: none;
 }
 .aboutSectionInfo {
     background-color: rgba(142, 108, 36, 0.95);
-    color: white;
-    border-radius: 10px;
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
-    padding: 80px 70px;
-    line-height: 25px;
     flex-direction: column;
-    gap: 40px;
+    border-radius: 10px;
+    align-items: center;
+    padding: 45px 30px;
+    line-height: 25px;
+    display: flex;
+    color: white;
     height: 200px;
+    gap: 30px;
 }
 .aboutSectionInfo span {
-    width: 100%;
     text-align: right;
     color: black;
+    width: 100%;
+    user-select: none;
+}
+.departments {
+    flex-direction: column;
+    margin-right: 25px;
+    margin-left: 25px;
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+}
+.branches {
+    justify-content: center;
+    font-size: 60px;
+    color: white;
+    display: flex;
+}
+.regions {
+    flex-direction: row;
+    display: flex;
+}
+.map {
+    padding-left: 20px;
+    display: flex;
+    flex: 1;
+}
+.map img {
+    height: 475px;
+    width: 325px;
+}
+.cities {
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex: 3;
+}
+.cities div {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    gap: 25px;
+}
+.cities img {
+    border-radius: 20px;
+    height: 225px;
+    width: 275px;
+}
+.city {
+    position: absolute;
+    padding: 5px;
+}
+.portfolioContainer {
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    align-items: center;
+    padding-top: 50px;
+    display: flex;
+    gap: 50px;
+}
+.portfolio {
+    font-size: 60px;
+    color: white;
+}
+.sectionsOfTheHouse {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 100px;
+}
+.roomsContainer {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+    flex: 1;
+}
+.roomsContainer div {
+    position: relative;
+    overflow: hidden;
+    height: 225px;
+    width: 325px;
+}
+.roomsContainer div:hover div {
+    transform: translateX(0%);
+    transition: transform 0.5s;
+}
+.roomsContainer img {
+    border-radius: 25px;
+    height: 225px;
+    width: 325px;
+}
+.roomsContainer div div {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateX(-101%);
+    transition: transform 0.5s;
+    backdrop-filter: blur(2px);
+    font-family: "italianno";
+    justify-content: center;
+    border-radius: 25px;
+    position: absolute;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+}
+.communicationContainer {
+    justify-content: space-around;
+    flex-direction: column;
+    display: flex;
+    padding: 50px;
+}
+.communication {
+    justify-content: center;
+    font-size: 400%;
+    display: flex;
+    color: white;
+    width: 100%;
+}
+.contactInfo {
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 200px;
+    display: flex;
+    gap: 10px;
+}
+.contactDetails {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    flex: 1;
+}
+.phoneInfo {
+    justify-content: space-around;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px;
+    gap: 20px;
+}
+.phone {
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    display: flex;
+    gap: 15px;
+}
+.phoneNumber {
+    font-size: 20px;
+}
+.emailInfo {
+    justify-content: space-between;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+}
+email,
+emailAdress {
+    font-size: 25px;
+}
+.message {
+    flex-direction: column;
+    display: flex;
+    gap: 25px;
+    flex: 3;
+}
+.message input {
+    padding: 0px 5px;
+    height: 35px;
+}
+.message textarea {
+    border-radius: 5px;
+    padding: 10px;
+}
+.sentContainer {
+    justify-content: flex-end;
+    padding: 0px 200px;
+    display: flex;
+}
+.footer {
+    background-image: linear-gradient(78deg, #b4975b 0%, #8e6d25 100%);
+    justify-content: space-between;
+    padding: 30px 100px;
+    user-select: none;
+    display: flex;
+}
+.copyrightNotice img {
+    font-size: 100px;
+    height: 40%;
+    width: 20%;
+}
+.follow {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
 }
