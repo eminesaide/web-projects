@@ -21,9 +21,20 @@ body {
 }
 a {
     color: black;
+    text-decoration: none;
 }
-.logo {
+.headerContainer i {
+    display: none;
+}
+.navigation {
+    display: none;
+}
+.logo img {
     width: 150px;
+}
+.logo:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
 .menuContainer {
     justify-content: space-between;
@@ -33,19 +44,18 @@ a {
     gap: 20px;
 }
 .mainContainer {
-    justify-content: space-between;
     display: flex;
-    height: 80%;
+    min-height: 80%;
+    padding: 20px;
 }
 .sloganContainer {
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     display: flex;
-    padding: 30px;
-    height: 100%;
-    gap: 50px;
-    flex: 1;
+    padding: 15px;
+    width: 50%;
+    gap: 20px;
 }
 .slogan {
     font-family: "italianno";
@@ -55,23 +65,25 @@ a {
 }
 .info {
     color: white;
+    max-width: 500px;
 }
 .imgContainer {
     justify-content: center;
     align-items: center;
     user-select: none;
     display: flex;
-    flex: 1;
+    width: 50%;
 }
 .button {
     background-image: linear-gradient(78deg, #b4975b 0%, #8e6d25 100%);
+    justify-content: space-between;
     align-items: center;
     border-radius: 20px;
     padding: 8px 25px;
     user-select: none;
     color: white;
     display: flex;
-    gap: 50px;
+    width: 100px;
 }
 .welcomeImg {
     width: 100%;
@@ -90,18 +102,19 @@ a {
     top: 0px;
 }
 .aboutUsContainer {
-    align-items: flex-start;
-    padding-bottom: 100px;
-    padding-top: 100px;
+    justify-content: space-around;
+    align-items: center;
     display: flex;
+    padding: 0px 20px;
+    gap: 20px;
+    min-height: 100%;
 }
 .aboutSection {
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     display: flex;
-    gap: 40px;
-    flex: 1;
+    gap: 10px;
 }
 .imageWithText {
     justify-content: center;
@@ -123,7 +136,7 @@ a {
 }
 .aboutSectionInfo {
     background-color: rgba(142, 108, 36, 0.95);
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: column;
     border-radius: 10px;
     align-items: center;
@@ -132,7 +145,6 @@ a {
     display: flex;
     color: white;
     height: 200px;
-    gap: 30px;
 }
 .aboutSectionInfo span {
     text-align: right;
@@ -140,13 +152,13 @@ a {
     width: 100%;
     user-select: none;
 }
-.departments {
+.departmentsContainer {
+    justify-content: space-evenly;
     flex-direction: column;
-    margin-right: 25px;
-    margin-left: 25px;
-    padding: 50px;
+    min-height: 100%;
     display: flex;
-    gap: 50px;
+    padding: 20px;
+    gap: 10px;
 }
 .branches {
     justify-content: center;
@@ -155,51 +167,44 @@ a {
     display: flex;
 }
 .regions {
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     display: flex;
+    gap: 20px;
 }
 .map {
-    padding-left: 20px;
-    display: flex;
-    flex: 1;
+    height: 425px;
+    width: auto;
 }
-.map img {
-    height: 475px;
-    width: 325px;
-}
-.cities {
-    justify-content: space-around;
-    align-items: center;
-    margin-right: 10px;
-    margin-left: 10px;
-    display: flex;
-    flex: 3;
-}
-.cities div {
+.cellContainer {
+    justify-content: space-between;
     flex-direction: column;
-    position: relative;
     display: flex;
-    gap: 25px;
+    height: 100%;
 }
-.cities img {
+.cellContainer div {
+    position: relative;
+}
+.countryImage {
     border-radius: 20px;
-    height: 225px;
-    width: 275px;
+    height: 200px;
+    width: 200px;
 }
 .city {
     position: absolute;
-    padding: 5px;
+    z-index: 1;
+    left: 10;
+    top: 10;
 }
 .portfolioContainer {
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 50px;
     align-items: center;
-    padding-top: 50px;
     display: flex;
-    gap: 50px;
+    padding: 15px;
 }
 .portfolio {
+    padding-bottom: 25px;
     font-size: 60px;
     color: white;
 }
@@ -207,16 +212,16 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 100px;
+    width: 100%;
 }
 .roomsContainer {
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
     display: flex;
-    gap: 25px;
-    flex: 1;
+    padding: 25px;
+    height: 100%;
+    gap: 20px;
 }
 .roomsContainer div {
     position: relative;
@@ -225,13 +230,13 @@ a {
     width: 325px;
 }
 .roomsContainer div:hover div {
-    transform: translateX(0%);
     transition: transform 0.5s;
+    transform: translateX(0%);
 }
 .roomsContainer img {
     border-radius: 25px;
-    height: 225px;
-    width: 325px;
+    height: 100%;
+    width: 100%;
 }
 .roomsContainer div div {
     background-color: rgba(0, 0, 0, 0.5);
@@ -243,9 +248,9 @@ a {
     border-radius: 25px;
     position: absolute;
     align-items: center;
-    color: white;
     font-size: 40px;
     display: flex;
+    color: white;
     bottom: 0px;
     right: 0px;
     left: 0px;
@@ -255,70 +260,62 @@ a {
     justify-content: space-around;
     flex-direction: column;
     display: flex;
-    padding: 50px;
+    height: 80%;
 }
 .communication {
     justify-content: center;
-    font-size: 400%;
-    display: flex;
+    font-size: 60px;
     color: white;
+    display: flex;
     width: 100%;
 }
 .contactInfo {
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 50px 200px;
+    padding: 20px 40px;
     display: flex;
-    gap: 10px;
 }
 .contactDetails {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     display: flex;
-    gap: 50px;
-    flex: 1;
+    height: 100%;
+    width: 20%;
 }
-.phoneInfo {
+.contactDetails i {
+    font-size: 20px;
+}
+.infoContainer {
     justify-content: space-around;
     background-color: white;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
+    min-height: 30%;
+    font-size: 20px;
     display: flex;
-    padding: 25px;
-    gap: 20px;
+    width: 100%;
 }
 .phone {
     justify-content: space-between;
     align-items: center;
+    padding: 0px 5px;
     font-size: 25px;
     display: flex;
-    gap: 15px;
+    gap: 5px;
 }
 .phoneNumber {
     font-size: 20px;
 }
-.emailInfo {
-    justify-content: space-between;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 5px;
-    font-size: 20px;
-    padding: 30px;
-    display: flex;
-    gap: 20px;
-}
-email,
-emailAdress {
-    font-size: 25px;
-}
+
 .message {
+    justify-content: space-between;
     flex-direction: column;
     display: flex;
-    gap: 25px;
-    flex: 3;
+    height: 100%;
+    min-width: 60%;
+    gap: 20px;
 }
 .message input {
     padding: 0px 5px;
@@ -330,13 +327,13 @@ emailAdress {
 }
 .sentContainer {
     justify-content: flex-end;
-    padding: 0px 200px;
+    padding: 0px 40px;
     display: flex;
 }
 .footer {
     background-image: linear-gradient(78deg, #b4975b 0%, #8e6d25 100%);
     justify-content: space-between;
-    padding: 30px 100px;
+    padding: 25px 25px;
     user-select: none;
     display: flex;
 }
@@ -350,4 +347,156 @@ emailAdress {
     flex-direction: column;
     align-items: center;
     display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+    .roomsContainer div {
+        height: 180px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .slogan {
+        font-size: 60px;
+    }
+    .info {
+        font-size: 13spx;
+    }
+    .imageWithText img {
+        height: 150px;
+        width: auto;
+    }
+    .imageWithText span {
+        font-size: 25px;
+    }
+    .aboutSectionInfo {
+        padding: 30px 15px;
+    }
+    .aboutSectionInfo p {
+        font-size: 14px;
+    }
+    .aboutSectionInfo span {
+        font-size: 14px;
+    }
+    .map {
+        height: 375px;
+    }
+    .countryImage {
+        width: 175px;
+        height: 175px;
+    }
+    .roomsContainer div {
+        width: 200px;
+        height: auto;
+    }
+    .phone {
+        font-size: 18px;
+    }
+    .phoneNumber {
+        font-size: 16px;
+    }
+    .email {
+        font-size: 18px;
+    }
+    .emailAdress {
+        flex-direction: column;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .headerContainer {
+        padding: 10px;
+    }
+    .navigation {
+        display: flex;
+        height: 100%;
+    }
+    .logo img {
+        width: 125px;
+    }
+    .headerContainer i {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+    }
+    .headerContainer i:hover {
+        opacity: 0.5;
+        cursor: pointer;
+        transition: transform 0.1s;
+        transform: translateY(3%);
+    }
+    .menuContainer {
+        display: none;
+    }
+    .mainContainer {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .aboutUsContainer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 30px 0px;
+    }
+    .regions {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0px 25px;
+    }
+    .regions img {
+        width: 100%;
+        height: auto;
+    }
+    .branches {
+        font-size: 50px;
+    }
+    .cellContainer {
+        gap: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .map {
+        display: none;
+    }
+    .portfolio {
+        font-size: 50px;
+    }
+    .sectionsOfTheHouse {
+        flex-direction: column;
+    }
+    .roomsContainer {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .roomsContainer div {
+        width: 250px;
+    }
+    .communicationContainer {
+        height: 100%;
+    }
+    .communication {
+        font-size: 50px;
+    }
+    .contactInfo {
+        flex-direction: column;
+        padding: 8%;
+        gap: 20px;
+    }
+    .contactDetails {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+    .infoContainer div {
+        padding: 10px;
+    }
+    .message {
+        width: 100%;
+    }
 }

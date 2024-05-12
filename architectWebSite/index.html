@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Architect Web Site</title>
+        <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="assets/css/style.css" />
         <link
             rel="stylesheet"
@@ -9,7 +10,9 @@
     </head>
     <body>
         <div class="headerContainer">
-            <img src="./assets/images/Logo.svg" class="logo" />
+            <a class="logo" href="#welcome">
+                <img src="./assets/images/Logo.svg" />
+            </a>
             <div class="menuContainer">
                 <a href="#welcome">Hoşgeldiniz</a>
                 <a href="#aboutUs">Hakkımızda</a>
@@ -17,6 +20,7 @@
                 <a href="#service">Hizmetlerimiz</a>
                 <a href="#communication">İletişim</a>
             </div>
+            <i class="fa-solid fa-bars"></i>
         </div>
         <!--hoşgeldiniz sayfası-->
         <div class="mainContainer" id="welcome">
@@ -26,9 +30,8 @@
                     <h1 class="slogan">Gerçek Olsun</h1>
                 </div>
                 <p class="info">
-                    Dünyanın dört bir yanında hizmet veren donanımlı <br />
+                    Dünyanın dört bir yanında hizmet veren donanımlı
                     tasarımcılarımız sizi hayalinizdeki eve kavuşturmak için
-                    <br />
                     buradalar.
                 </p>
                 <div class="button">
@@ -36,7 +39,6 @@
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
-
             <div class="imgContainer">
                 <div>
                     <img class="welcomeImg" src="assets/images/welcome.png" />
@@ -44,7 +46,6 @@
                 </div>
             </div>
         </div>
-
         <!--hakkımızda sayfası-->
         <div class="aboutUsContainer" id="aboutUs">
             <!--biz kimiz-->
@@ -69,7 +70,6 @@
                     <span>more...</span>
                 </div>
             </div>
-
             <div class="aboutSection">
                 <div class="imageWithText">
                     <img src="assets/images/nelerYapariz.png" />
@@ -109,47 +109,60 @@
             </div>
         </div>
         <!--şubelerimiz sayfası-->
-        <div class="departments" id="departments">
+        <div class="departmentsContainer" id="departments">
             <div class="branches">Şubelerimiz</div>
             <div class="regions">
-                <div class="map">
-                    <img src="assets/images/map.png" />
+                <img class="map" src="assets/images/map.png" />
+                <div class="cellContainer">
+                    <div>
+                        <img
+                            class="countryImage"
+                            src="assets/images/russia.png"
+                        />
+                        <span class="city">Rusya</span>
+                    </div>
+                    <div>
+                        <img
+                            class="countryImage"
+                            src="assets/images/suudiArabistan.png"
+                        />
+                        <span class="city">Suudi Arabistan</span>
+                    </div>
                 </div>
-                <div class="cities">
+                <div class="cellContainer">
                     <div>
-                        <div>
-                            <img src="assets/images/russia.png" />
-                            <span class="city">Rusya</span>
-                        </div>
-                        <div>
-                            <img src="assets/images/suudiArabistan.png" />
-                            <span class="city">Suudi Arabistan</span>
-                        </div>
+                        <img
+                            class="countryImage"
+                            src="assets/images/turkiye.png"
+                        />
+                        <span class="city">Türkiye</span>
                     </div>
                     <div>
-                        <div>
-                            <img src="assets/images/turkiye.png" />
-                            <span class="city">Türkiye</span>
-                        </div>
-                        <div>
-                            <img src="assets/images/ispanya.png" />
-                            <span class="city">İspanya</span>
-                        </div>
+                        <img
+                            class="countryImage"
+                            src="assets/images/ispanya.png"
+                        />
+                        <span class="city">İspanya</span>
+                    </div>
+                </div>
+                <div class="cellContainer">
+                    <div>
+                        <img
+                            class="countryImage"
+                            src="assets/images/almanya.png"
+                        />
+                        <span class="city">Almanya</span>
                     </div>
                     <div>
-                        <div>
-                            <img src="assets/images/almanya.png" />
-                            <span class="city">Almanya</span>
-                        </div>
-                        <div>
-                            <img src="assets/images/fransa.png" />
-                            <span class="city">Fransa</span>
-                        </div>
+                        <img
+                            class="countryImage"
+                            src="assets/images/fransa.png"
+                        />
+                        <span class="city">Fransa</span>
                     </div>
                 </div>
             </div>
         </div>
-
         <!--portfolyo sayfası-->
         <div class="portfolioContainer" id="service">
             <div class="portfolio">Portfolyo</div>
@@ -186,7 +199,6 @@
                 </div>
             </div>
         </div>
-
         <!--iletişim sayfası-->
         <div class="communicationContainer" id="communication">
             <div class="communication">İletişim</div>
@@ -194,7 +206,7 @@
                 <!--bilgilendirme kısmı (telefon munarası ve mail adresi,mesanj kısmı)-->
                 <div class="contactDetails">
                     <!--telefon no-->
-                    <div class="phoneInfo">
+                    <div class="infoContainer">
                         <div class="phone">
                             <i class="fa-solid fa-phone-volume"></i>
                             Telefon
@@ -202,8 +214,8 @@
                         <div class="phoneNumber">+90 544 186 49 10</div>
                     </div>
                     <!--mail-->
-                    <div class="emailInfo">
-                        <div class="email">
+                    <div class="infoContainer">
+                        <div class="phone">
                             <i class="fa-solid fa-envelope-circle-check"></i>
                             Email
                         </div>
